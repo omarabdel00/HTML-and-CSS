@@ -1,0 +1,51 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to Omar's Favorite Song</h1>
+    <p>Enjoy watching my favorite song <a href="https://www.youtube.com/watch?v=tt2k8PGm-TI">Zayan - Dusk till Dawn</a>.</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/tt2k8PGm-TI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+    </iframe>
+</div>
+
+<div id="charging" class="fa"></div>
+<!DOCTYPE html>
+<html>
+<style>
+    #div1 {
+        font-size: 48px;
+    }
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body>
+
+    <div id="div1" class="fa"></div>
+
+    <script>
+        function chargebattery() {
+            var a;
+            a = document.getElementById("div1");
+            a.innerHTML = "&#xf244;";
+            setTimeout(function () {
+                a.innerHTML = "&#xf243;";
+            }, 1000);
+            setTimeout(function () {
+                a.innerHTML = "&#xf242;";
+            }, 2000);
+            setTimeout(function () {
+                a.innerHTML = "&#xf241;";
+            }, 3000);
+            setTimeout(function () {
+                a.innerHTML = "&#xf240;";
+            }, 4000);
+        }
+        chargebattery();
+        setInterval(chargebattery, 5000);
+    </script>
+
+    <p>This is so relaxing as if charging my soul</p>
+</body>
+</html>
